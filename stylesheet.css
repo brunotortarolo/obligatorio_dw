@@ -1,0 +1,487 @@
+/*utilización de variables para prolijidad y mantenimiento de colores reutilizados.*/
+
+:root {
+    --black: #000;
+    --black-transluscent: #0000007e;
+    --dark-orange-transluscent: #e45926a0;
+    --dark-orange: #E45826;
+    --darker-blue: #062645;
+    --light-orange: #EC994B;
+    --deep-orange: #c33704;
+    --deep-red: #9a0202;
+}
+
+
+/*RESET*/
+
+* {
+    border: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* GENERALES */
+
+a,
+input[type=submit] {
+    background-color: var(--dark-orange);
+    color: var(--deep-red);
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a:hover,
+input[type=submit]:hover {
+    background-color: var(--deep-orange);
+    color: var(--light-orange);
+    transition: 0.2s ease-in-out;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+section {
+    display: grid;
+    padding: 50px;
+}
+
+main {
+    margin-top: 170px;
+}
+
+main section:nth-of-type(even) {
+    background-color: var(--dark-orange);
+}
+
+main section:nth-of-type(odd) {
+    background-color: var(--light-orange);
+}
+
+article,
+#fotos-section figure {
+    box-shadow: 2px 5px 9px var(--black);
+    transition: 0.2s ease-in-out;
+}
+
+article,
+input,
+select {
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+article:hover {
+    transform: scale(1.02);
+    box-shadow: 4px 7px 12px var(--black);
+    transition: 0.2s ease-in-out;
+}
+
+article img {
+    border-top-left-radius: 15px;
+}
+
+article a {
+    border-bottom-right-radius: 15px;
+}
+
+
+/*NAVEGACION*/
+
+header {
+    align-items: center;
+    background-color: var(--light-orange);
+    column-gap: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: auto;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 2px 0px 8px var(--black);
+}
+
+header figure img {
+    width: 200px;
+    padding: 10px 25px 10px 0;
+    box-sizing: border-box;
+}
+
+nav {
+    align-self: flex-end;
+    padding-bottom: 10px;
+    text-align: right;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 925px;
+}
+
+nav ul li a {
+    background-color: transparent;
+    text-align: center;
+    color: var(--black);
+    font-size: 35px;
+    font-weight: bolder;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+nav ul li a:hover {
+    color: var(--deep-orange)
+}
+
+h1 {
+    font-family: 'Permanent Marker', 'Roboto', sans-serif;
+    font-size: 6em;
+    padding: 100px;
+    margin: auto 50px;
+}
+
+h2 {
+    font-size: 35px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+
+/*WELCOME SECTION*/
+
+#welcome-section {
+    background-image: url('img/welcome-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--light-orange);
+    justify-content: center;
+    text-align: center;
+    /*Aplicando propiedad para generar un borde a fuente del elemento H1
+    La propiedad funciona especificando la cantidad de pixeles y el sentido del borde, posición y color para las cuatro 
+    direcciones de la fuente (left, top, right, bottom.
+    La intención es generar mayor contraste para mejor legibilidad, dada la imagen de fondo*/
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#welcome-section p {
+    /*Agregar desenfoque al fondo para mejor legibilidad del texto*/
+    backdrop-filter: blur(5px);
+    background-color: var(--black-transluscent);
+    font-size: 2em;
+    font-weight: 400;
+    margin: auto 100px;
+    padding: 20px;
+    width: 1200px;
+}
+
+
+/*PROMOS SECTION*/
+
+#promos-section {
+    column-gap: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 575px);
+    grid-template-rows: repeat(2, auto);
+    justify-content: center;
+    row-gap: 20px;
+}
+
+#promos-section h2 {
+    grid-column: 1 / span 2;
+}
+
+#promos-section article {
+    background-color: var(--light-orange);
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5em;
+}
+
+#promos-section figure {
+    height: 300px;
+    object-fit: cover;
+    width: 100%;
+}
+
+#promos-section img {
+    height: 100%;
+    width: 100%;
+}
+
+#promos-section h3,
+#promos-section p {
+    padding: 20px 10px 5px 10px;
+}
+
+#promos-section article p:last-of-type,
+#tarifas-section article p:last-of-type {
+    align-items: flex-end;
+    display: flex;
+    font-size: 18px;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    margin-top: auto;
+    padding: 0 5px 0 10px;
+}
+
+#promos-section article p:last-of-type a,
+#tarifas-section article p:last-of-type a {
+    font-size: 18px;
+    font-weight: bolder;
+    text-align: center;
+    width: 25%;
+}
+
+
+/*TARIFAS SECTION*/
+
+#tarifas-section {
+    column-gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 290px);
+    grid-template-rows: auto 500px;
+    justify-content: center;
+    row-gap: 20px;
+}
+
+#tarifas-section h2 {
+    grid-column: 1 / span 4;
+}
+
+#tarifas-section article {
+    background-color: var(--light-orange);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#tarifas-section article h3 {
+    font-size: 25px;
+}
+
+#tarifas-section article h3,
+#tarifas-section ul,
+#tarifas-section p {
+    padding: 5px 5px 5px 10px;
+}
+
+#tarifas-section ul {
+    display: flex;
+    flex-direction: column;
+    font-size: 22px;
+    height: 40%;
+    justify-content: space-around;
+}
+
+#tarifas-section img {
+    width: 100%;
+}
+
+.tarifas-foot a {
+    width: 35%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+
+/*FOTOS SECTION*/
+
+#fotos-section {
+    column-gap: 20px;
+    grid-template-columns: repeat(4, 285px);
+    grid-template-rows: auto repeat(2, 250px);
+    justify-content: center;
+    padding-bottom: 50px;
+    row-gap: 20px;
+}
+
+#fotos-section h2 {
+    grid-column: 1/span 4;
+    grid-row: 1/span 1;
+}
+
+#fotos-section figure:first-of-type {
+    grid-column: 1/span 1;
+    grid-row: 2/ span 2;
+}
+
+#fotos-section figure:last-of-type {
+    grid-column: 4/span 1;
+    grid-row: 2/ span 2;
+}
+
+#fotos-section img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+#fotos-section img,
+#fotos-section figure {
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+#fotos-section img:hover {
+    box-shadow: 4px 7px 12px var(--black);
+    transform: scale(1.3);
+    transition: 0.2s ease-in-out;
+}
+
+
+/*RESERVAS SECTION*/
+
+#reservas-section {
+    justify-content: center;
+    font-size: 1.5em;
+}
+
+#reservas-section form {
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    grid-template-rows: repeat(4, 50px) 100px;
+    row-gap: 5px;
+    justify-content: space-around;
+}
+
+#reservas-section label {
+    grid-column: auto;
+    grid-row: 1 / span 1;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+
+#reservas-section input {
+    font-size: 20px;
+    grid-row: 2 / span 1;
+    height: 45px;
+    margin: 0 auto;
+    width: 300px;
+}
+
+#reservas-section #label-alojamiento {
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 1;
+}
+
+#reservas-section select {
+    font-size: 20px;
+    grid-column: 1 / span 2;
+    grid-row: 4 / span 1;
+    height: 45px;
+    margin: 0 auto;
+    width: 700px;
+}
+
+#reservas-section input[type=submit] {
+    grid-column: 1/span 2;
+    font-size: 30px;
+    font-weight: bolder;
+    grid-row: 5 / span 1;
+    height: 90px;
+    padding: 5px;
+}
+
+input,
+select {
+    background-color: #E45826;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--deep-red);
+    box-shadow: 1px 2px 4px var(--black);
+}
+
+select {
+    text-align: center;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    appearance: none;
+}
+
+
+/*FOOTER*/
+
+footer {
+    padding: 0 auto;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: var(--darkblue);
+}
+
+footer ul {
+    display: inline-block;
+    width: 1200px;
+    margin: auto auto;
+}
+
+footer ul li {
+    margin: auto auto;
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    border-color: #E45826;
+}
+
+#airbnb {
+    background: url('img/icon-sprite.png') no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+}
+
+#airbnb:hover {
+    background-position: 0 -64px;
+}
+
+#instagram {
+    background: url('img/icon-sprite.png') no-repeat;
+    background-position: 0 -128px;
+}
+
+#instagram:hover {
+    background-position: 0 -192px;
+}
+
+#move-up {
+    background-color: var(--dark-orange-transluscent);
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 2px 5px 12px var(--black);
+}
+
+#move-up:hover {
+    background-color: var(--dark-orange);
+}
+
+#move-up img {
+    color: white;
+    width: 80%;
+    height: 80%
+}
