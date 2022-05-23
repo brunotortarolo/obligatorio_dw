@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <header id="header">
+    <header>
         <figure><img src="img/narutel-logo.png" alt="narutel-logo"></figure>
         <nav>
             <ul>
@@ -24,7 +24,7 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main id="content-start">
         <section id="welcome-section">
             <h1>BIENVENIDOS!</h1>
             <p>Narutel ofrece una experiencia novedosa para los amantes del anime que buscan hospedarse en un lugar diferente, permitiéndoles una nueva forma de experimentar su pasión por el universo del personaje.</p>
@@ -32,14 +32,14 @@
         <section id="promos-section">
             <h2>PROMOS</h2>
             <article>
-                <figure><img src="img/promo1.jpg" alt="Narutel Promoción"></figure>
+                <figure><img src="img/promo-1.jpg" alt="Narutel Promoción"></figure>
                 <h3>Promo Uzumaki Familiar (hasta 5 personas)</h3>
                 <p>Habitación con dos dormitorios, hasta 5 personas desde u$s95.00.</p>
                 <p>10% de descuento reservando en la próxima media hora.</p>
                 <p><strong>Vigencia desde 01/05/2022 hasta el 01/07/2022</strong><a href="#">Ampliar</a></p>
             </article>
             <article>
-                <figure><img src="img/promo2.jpg" alt="Narutel Promoción"></figure>
+                <figure><img src="img/promo-2.jpg" alt="Narutel Promoción"></figure>
                 <h3>Promo Uchiha (2 Personas)</h3>
                 <p>Habitación de un dormitorio, hasta 2 personas, desde u$s35.00.</p>
                 <p>10% de descuento reservando en la próxima media hora.</p>
@@ -49,11 +49,11 @@
         <section id="fotos-section">
             <h2>FOTOS</h2>
             <figure id="foto-1"><img src="img/narutel-1.jpg" alt="habitación Narutel"></figure>
-            <figure id="foto-2"><img src="img/narutel-2.jpg" alt="habitación Narutel"></figure>
+            <figure id="foto-2"><img src="img/narutel-5.jpeg" alt="habitación Narutel"></figure>
             <figure id="foto-3"><img src="img/narutel-3.jpg" alt="habitación Narutel"></figure>
             <figure id="foto-4"><img src="img/narutel-4.jpg" alt="habitación Narutel"></figure>
-            <figure id="foto-5"><img src="img/narutel-1.jpg" alt="habitación Narutel"></figure>
-            <figure id="foto-6"><img src="img/narutel-1.jpg" alt="habitación Narutel"></figure>
+            <figure id="foto-5"><img src="img/narutel-6.jpg" alt="habitación Narutel"></figure>
+            <figure id="foto-6"><img src="img/narutel-2.jpg" alt="habitación Narutel"></figure>
         </section>
         <section id="tarifas-section">
             <h2>TARIFAS</h2>
@@ -106,9 +106,9 @@
             <h2>RESERVAS</h2>
             <form action="" method="POST">
                 <label for="nombre-apellido-input">Nombre y apellido (*)</label>
-                <input id="nombre-apellido-input" type="text" required>
+                <input id="nombre-apellido-input" type="text" required placeholder="Ej: Bruno Tortarolo">
                 <label for="cantidad-huespedes-input">Cantidad de huéspedes (*)</label>
-                <input id="cantidad-huespedes-input" type="number" min="1" max="4" required>
+                <input id="cantidad-huespedes-input" type="number" min="1" max="5" required placeholder="Máximo 5">
                 <label for="seleccion-alojamiento" id="label-alojamiento">Tipo de Alojamiento</label>
                 <select name="seleccion-alojamiento" id="seleccion-alojamiento" required>
                     <option selected disabled>-- Elija su Hospedaje --</option>
@@ -120,16 +120,14 @@
                 <input type="submit" value="RESERVA YA!">
             </form>
         </section>
-        <a href="#header" id="move-up"><img src="img/arrow_upward_FILL0_wght400_GRAD0_opsz48.svg" alt="back to top"></a>
+        <a href="#content-start" id="move-up"><img src="img/arrow-up.png" alt="back to top"></a>
     </main>
     <footer>
         <ul>
             <li id="airbnb">
                 <a href="www.airbnb.com" target="_blank"></a>
             </li>
-        </ul>
-        <ul>
-            <li>Seguinos!</li>
+            <li id="follow">Seguinos!</li>
             <li id="instagram">
                 <a href="www.instagram.com" target="_blank"></a>
             </li>
