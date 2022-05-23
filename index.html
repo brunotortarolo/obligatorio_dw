@@ -104,14 +104,14 @@
         </section>
         <section id="reservas-section">
             <h2>RESERVAS</h2>
-            <form action="" method="POST">
+            <form action="">
                 <label for="nombre-apellido-input">Nombre y apellido (*)</label>
                 <input id="nombre-apellido-input" type="text" required placeholder="Ej: Bruno Tortarolo">
                 <label for="cantidad-huespedes-input">Cantidad de huéspedes (*)</label>
                 <input id="cantidad-huespedes-input" type="number" min="1" max="5" required placeholder="Máximo 5">
                 <label for="seleccion-alojamiento" id="label-alojamiento">Tipo de Alojamiento</label>
                 <select name="seleccion-alojamiento" id="seleccion-alojamiento" required>
-                    <option selected disabled>-- Elija su Hospedaje --</option>
+                    <option selected disabled value="">-- Elija su Hospedaje --</option>
                     <option value="Suite-Konohagakure">Suite Konohagakure</option>
                     <option value="Suite-Kirigakure">Suite Kirigakure</option>
                     <option value="Suite-Kumogakure">Suite Kumogakure</option>
@@ -120,19 +120,19 @@
                 <input type="submit" value="RESERVA YA!">
             </form>
         </section>
-        <a href="#content-start" id="move-up"><img src="img/arrow-up.png" alt="back to top"></a>
+        <a href="#content-start" id="move-up" title="Volver al inicio"><img src="img/arrow-up.png" alt="back to top"></a>
     </main>
     <footer>
         <ul>
             <li id="airbnb">
-                <a href="www.airbnb.com" target="_blank"></a>
+                <a href="https://www.airbnb.com/" target="_blank" title="www.airbnb.com"></a>
             </li>
             <li id="follow">Seguinos!</li>
             <li id="instagram">
-                <a href="www.instagram.com" target="_blank"></a>
+                <a href="https://www.instagram.com/" target="_blank" title="www.instagram.com"></a>
             </li>
             <li id="facebook">
-                <a href="www.facebook.com" target="_blank"></a>
+                <a href="https://www.facebook.com/" target="_blank" title="www.facebook.com"></a>
             </li>
         </ul>
     </footer>

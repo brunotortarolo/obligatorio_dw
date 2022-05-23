@@ -104,10 +104,12 @@ header {
     width: 100%;
     box-shadow: 2px 0px 8px var(--black);
     z-index: 1;
+    /*Cambiar eje z (o nivel de profundidad) del header para que esté por arriba del resto de la página
+    y así evitar rupturas con otras transiciones y efectos de otros elementos de la página.*/
 }
 
 header figure img {
-    width: 200px;
+    width: 150px;
     padding: 10px 25px 10px 0;
     box-sizing: border-box;
 }
@@ -164,13 +166,13 @@ h2 {
     background-size: cover;
     color: var(--light-orange);
     justify-content: center;
+    padding-top: 150px;
     text-align: center;
     /*Aplicando propiedad para generar un borde a fuente del elemento H1
     La propiedad funciona especificando la cantidad de pixeles y el sentido del borde, posición y color para las cuatro 
     direcciones de la fuente (left, top, right, bottom.
     La intención es generar mayor contraste para mejor legibilidad, dada la imagen de fondo*/
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    margin-top: 200px;
 }
 
 #welcome-section p {
@@ -392,6 +394,8 @@ h2 {
 }
 
 #reservas-section input[type=submit] {
+    cursor: pointer;
+    /*Espcificar comportamiento del cursor sobre este elemento*/
     font-size: 30px;
     font-weight: bolder;
     grid-column: 1/span 2;
@@ -431,85 +435,93 @@ footer ul li a:hover {
 }
 
 footer {
-    padding: 0 auto;
-    height: 100px;
-    display: flex;
-    justify-content: center;
     background-color: var(--deep-red);
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    padding: 0 auto;
 }
 
 footer ul {
-    display: grid;
-    grid-template-columns: 200px 600px repeat(2, 200px);
     align-items: center;
+    column-gap: 10px;
+    display: grid;
+    grid-template-columns: 64px 950px repeat(2, 64px);
 }
 
 footer ul li {
-    font-size: 20px;
+    /*Entiendo que la práctica sea evitar el important siempre que sea posible.
+    Pero en este caso parecía tener un conflicto para aplicar los valores de forma general, y no quería repetir
+    varias veces lo mismo.*/
+    background-repeat: no-repeat !important;
+    background-size: 300% 200% !important;
     color: var(--light-orange);
+    font-size: 20px;
+    height: 64px;
     justify-self: flex-end;
     width: 64px;
-    height: 64px;
-    background-repeat: no-repeat;
-    background-size: 64px;
+}
+
+footer ul li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
 }
 
 #airbnb {
     grid-column: 1/span 1;
     background: url('img/footer-icons-sprites.png');
-    background-position: 0 0;
     justify-self: flex-start;
+    background-position: -64px 0;
 }
 
 #airbnb:hover {
-    background-position: 0 -76px;
+    background-position: -64px -64px;
 }
 
 #follow {
     width: auto;
     height: auto;
+    font-size: 25px;
     grid-column: 2/span 1;
-    background-color: aquamarine;
     text-align: right;
 }
 
 #instagram {
     grid-column: 3/span 1;
     background: url('img/footer-icons-sprites.png');
-    background-position: 76px 0px;
-    background-color: aquamarine;
+    background-position: -128px 0;
 }
 
 #instagram:hover {
-    background-position: 76px -76px;
+    background-position: -128px -64px;
 }
 
 #facebook {
     grid-column: 4/span 1;
     background: url('img/footer-icons-sprites.png');
     background-position: 0px 0px;
-    background-color: aquamarine;
 }
 
 #facebook:hover {
-    background-position: 0 -128px;
+    background-position: 0 -64px;
 }
 
 
 /*BOTON DE REGRESO*/
 
 #move-up {
-    background-color: var(--dark-orange-transluscent);
-    position: fixed;
-    bottom: 100px;
-    right: 50px;
-    border-radius: 50%;
-    height: 100px;
-    width: 100px;
-    display: flex;
-    justify-content: space-around;
     align-items: center;
+    background-color: var(--dark-orange-transluscent);
+    border-radius: 50%;
+    bottom: 100px;
     box-shadow: 2px 5px 12px var(--black);
+    display: flex;
+    height: 100px;
+    justify-content: space-around;
+    position: fixed;
+    right: 50px;
+    width: 100px;
 }
 
 #move-up:hover {
@@ -517,7 +529,6 @@ footer ul li {
 }
 
 #move-up img {
-    color: white;
+    height: 50%;
     width: 50%;
-    height: 50%
 }
