@@ -199,7 +199,7 @@ h2 {
 }
 
 #promos-section h2 {
-    grid-column: 1 / span 2;
+    grid-column: 1/span 2;
 }
 
 #promos-section article {
@@ -257,7 +257,7 @@ h2 {
 }
 
 #tarifas-section h2 {
-    grid-column: 1 / span 4;
+    grid-column: 1/span 4;
 }
 
 #tarifas-section article {
@@ -315,12 +315,12 @@ h2 {
 
 #fotos-section figure:first-of-type {
     grid-column: 1/span 1;
-    grid-row: 2/ span 2;
+    grid-row: 2/span 2;
 }
 
 #fotos-section figure:last-of-type {
     grid-column: 4/span 1;
-    grid-row: 2/ span 2;
+    grid-row: 2/span 2;
 }
 
 #fotos-section img {
@@ -359,14 +359,14 @@ h2 {
 
 #reservas-section label {
     grid-column: auto;
-    grid-row: 1 / span 1;
+    grid-row: 1/span 1;
     margin: 0 auto;
     padding: 15px 0;
 }
 
 #reservas-section input {
     font-size: 20px;
-    grid-row: 2 / span 1;
+    grid-row: 2/span 1;
     height: 45px;
     margin: 0 auto;
     padding: 5px;
@@ -379,14 +379,14 @@ h2 {
 }
 
 #reservas-section #label-alojamiento {
-    grid-column: 1 / span 2;
-    grid-row: 3 / span 1;
+    grid-column: 1/span 2;
+    grid-row: 3/span 1;
 }
 
 #reservas-section select {
     font-size: 20px;
-    grid-column: 1 / span 2;
-    grid-row: 4 / span 1;
+    grid-column: 1/span 2;
+    grid-row: 4/span 1;
     height: 45px;
     margin: 0 auto;
     padding: 5px;
@@ -399,7 +399,7 @@ h2 {
     font-size: 30px;
     font-weight: bolder;
     grid-column: 1/span 2;
-    grid-row: 5 / span 1;
+    grid-row: 5/span 1;
     height: 90px;
     margin-top: 15px;
     padding: 5px;
