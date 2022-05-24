@@ -46,6 +46,7 @@ html {
 
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: var(--light-orange);
 }
 
 section {
@@ -144,7 +145,7 @@ nav ul li a:hover {
 
 h1 {
     font-family: 'Permanent Marker', 'Roboto', sans-serif;
-    font-size: 6em;
+    font-size: 60px;
     padding: 100px;
     margin: auto 50px;
 }
@@ -179,7 +180,7 @@ h2 {
     /*Agregar desenfoque al fondo para mejor legibilidad del texto*/
     backdrop-filter: blur(5px);
     background-color: var(--black-transluscent);
-    font-size: 2em;
+    font-size: 30px;
     font-weight: 400;
     margin: auto 100px;
     padding: 20px;
@@ -206,7 +207,7 @@ h2 {
     background-color: var(--light-orange);
     display: flex;
     flex-direction: column;
-    font-size: 1.5em;
+    font-size: 25px;
 }
 
 #promos-section figure {
@@ -346,7 +347,7 @@ h2 {
 
 #reservas-section {
     justify-content: center;
-    font-size: 1.5em;
+    font-size: 25px;
 }
 
 #reservas-section form {
@@ -438,7 +439,7 @@ footer {
     background-color: var(--deep-red);
     display: flex;
     justify-content: center;
-    padding: 0 auto;
+    padding: auto 0;
 }
 
 footer ul {
